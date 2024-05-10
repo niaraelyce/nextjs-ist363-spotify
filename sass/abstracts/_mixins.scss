@@ -65,7 +65,7 @@
   $sizes: xs, sm, md, lg, xl;
 
   @each $size in $sizes {
-    @include breakpoint(#{$size}) {
+    @include breakpoint($size) {
       @for $i from 1 through 12 {
         &.col__#{$size}__#{$i} {
           width: calc($i/12 * 100%);
@@ -101,6 +101,7 @@
     }
   }
 }
+
 @mixin generateMargins() {
   $sides: top, right, bottom, left;
 
@@ -112,6 +113,7 @@
     }
   }
 }
+
 @mixin generateTextAlignClasses() {
   $values: left, right, center;
 
