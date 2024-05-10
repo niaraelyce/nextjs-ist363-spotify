@@ -27,7 +27,7 @@ function HomePage() {
 
   return (
     <main>
-      <Showcase />
+      <Showcase items={artists} />
     </main>
   );
 }
